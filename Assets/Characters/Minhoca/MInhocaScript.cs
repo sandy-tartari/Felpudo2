@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MInhocaScript : MonoBehaviour
+public class MinhocaScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float velocity;
+    private Rigidbody2D body;
     void Start()
     {
-        
+        this.body = GetComponent<Rigidbody2D>();
+        this.body.velocity = new Vector2(this.velocity,0);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
