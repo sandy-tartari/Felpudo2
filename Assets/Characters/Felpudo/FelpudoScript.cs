@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class FelpudoScript : MonoBehaviour
 {
+    
     public float jumpForce;
     public bool startGame, gameOver;
-    public Text mainText;
     private Rigidbody2D body;
     private SpriteRenderer render;
+    private GameObject gameController;
     void Start()
     {
         this.body = GetComponent<Rigidbody2D>();
@@ -17,17 +18,18 @@ public class FelpudoScript : MonoBehaviour
         this.body.isKinematic = true;
         this.startGame = false;
         this.gameOver = false;
+        this.gameController = GameObject.FindGameObjectWithTag("GameController");
     }
 
     void Update()
     {
         if (Input.GetButton("Fire1") && !this.gameOver)
         {
-            if (!this.gameOver)
+            if (!this.startGame)
             {
                 this.startGame = true;
                 this.body.isKinematic = false;
-                this.mainText.text = string.Empty;
+                this.gameController.SendMessage("StartGame");
             }
             this.body.AddForce(new Vector2(0, this.jumpForce));
         }
@@ -40,6 +42,7 @@ public class FelpudoScript : MonoBehaviour
         this.body.AddForce(new Vector2(-400, 400));
         this.body.AddTorque(500);
         this.render.color = new Color(1, 0.75f, 0.75f, 1);
-        this.mainText.text = "Fim de Jogo!";
+        this.gameController.SendMessage("EndGame");
+        Debug.Log(string.Format("Colidiu com {0}", other.gameObject.name));
     }
 }   

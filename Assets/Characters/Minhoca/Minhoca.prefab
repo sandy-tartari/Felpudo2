@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 2777754190083009958}
   - component: {fileID: 2134378823362026487}
   - component: {fileID: 7543273765910351962}
-  - component: {fileID: 5310845832776776572}
   - component: {fileID: 6239656301127522600}
+  - component: {fileID: 5310845832776776572}
   m_Layer: 0
   m_Name: Minhoca
-  m_TagString: Untagged
+  m_TagString: Foe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,8 +31,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4830227802257753356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.301, y: -2.665, z: 0}
-  m_LocalScale: {x: 0.5643155, y: 0.51851916, z: 1}
+  m_LocalPosition: {x: -0.302, y: -0.721, z: 0}
+  m_LocalScale: {x: 0.4428951, y: 0.36829716, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -169,19 +169,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0278423, y: 3.3095264}
   m_EdgeRadius: 0
---- !u!114 &5310845832776776572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4830227802257753356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 066cdad85f4fc324ebd42e402b57b48c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Velocity: -1
 --- !u!61 &6239656301127522600
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -208,3 +195,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7060058, y: 1.1348877}
   m_EdgeRadius: 0
+--- !u!114 &5310845832776776572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830227802257753356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066cdad85f4fc324ebd42e402b57b48c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: -2
