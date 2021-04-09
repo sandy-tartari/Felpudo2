@@ -16,7 +16,6 @@ public class MinhocaScript : MonoBehaviour
         this.gameController = GameObject.FindGameObjectWithTag("GameController");
         this.scoreUp = false;
     }
-
     void Update()
     {
         if (this.transform.position.x < -25)
@@ -33,6 +32,5 @@ public class MinhocaScript : MonoBehaviour
                 }
             }
         }
-        
     }
 }

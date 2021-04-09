@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameControllerScript : MonoBehaviour
@@ -42,6 +43,10 @@ public class GameControllerScript : MonoBehaviour
         float randomWidth = 10 * Random.value - 5;
         GameObject newFoe = Instantiate(foe);
         newFoe.transform.position = new Vector2(15, randomWidth);
+    }
+    void RestartGame()
+    {
+        SceneManager.LoadScene("SampleScene"); 
     }
 }
 
